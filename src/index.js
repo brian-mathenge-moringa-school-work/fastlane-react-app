@@ -5,6 +5,8 @@ import App from './App';
 import About from './Components/About';
 import NavBar from './Components/NavBar';
 import Cars from './Components/Cars';
+import Sidebar  from './Components/Sidebar';
+import CarDetails from './Components/CarDetails'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import "../src/App.css"
 
@@ -18,6 +20,7 @@ root.render(
       <Route path='/' element={<App />}/>
       <Route path='/about' element={<About />}/>
       <Route path='/cars' element={<Cars />}/>
+      <Route path='/cars/:id' element={<CarDetails />}/>
     </Routes>
   </Router>
 );
