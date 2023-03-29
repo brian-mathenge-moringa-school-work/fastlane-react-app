@@ -41,7 +41,7 @@ function CarList() {
                                     </nav>
                                     <nav className="navigation-buttons">
                                         <button className="cart-button">Add to Cart</button>
-                                        <Link to={`/cars/${car.id}`}><button className="view-button">View Car</button></Link>
+                                        <Link to={`/cars/${car.id}`} ><button className="view-button">View Car</button></Link>
                                     </nav>
                                 </div>
                             </div>

@@ -146,15 +146,18 @@
 
  .homecontent {
     /* background-color: rgb(0, 0, 0); */
-    background: url("./images/flm7.jpg") top center no-repeat;
+    background: url("./images/flm7.jpg") top;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
      position: relative;
-     /* width: 100%; */
+     width: 100%;
      /* display: flex; */
      /* justify-content: center;
      align-items: center; */
      height: 1000px;
-     margin: 0, auto;
+     margin: 0;
  }
 
  .homeinnercont {
@@ -320,12 +323,13 @@
     background-color: rgb(27, 26, 26);
     padding: 8px;
     color: wheat;
-    font-weight: bold;
+    font-weight: bolder;
     display: inline-block;
     font-size: 16px;
     margin-right: 16px;
     margin-left: 12px;
     border-radius: 12px;
+    font-weight: lighter;
 }
 
 .car-segments {
@@ -341,6 +345,7 @@
     margin-right: 36px;
     margin-left: 16px;
     border-radius: 12px;
+    font-weight: lighter;
 }
 
 .car-transmission {
@@ -350,6 +355,7 @@
     font-size: 20px;
     margin-right: 48px;
     border-radius: 12px;
+    font-weight: lighter;
 }
 
 .car-drive {
@@ -359,6 +365,7 @@
     font-size: 20px;
     margin-right: 48px;
     border-radius: 12px;
+    font-weight: lighter;
 }
 
 .car-footer {
@@ -370,8 +377,9 @@
     padding: 8px;
     color: wheat;
     font-size: 20px;
-    margin-right: 36px;
-    margin-left: 16px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-weight: bolder;
 }
 
 .car-availability {
@@ -385,25 +393,28 @@
 
 .navigation-buttons {
     display: flex;
-    margin-bottom: 6px;
 }
 
 .cart-button {
     background-color: #ea5316;
     padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     color: wheat;
-    font-size: 20px;
+    font-size: 16px;
     margin-right: 48px;
+    margin-left: 80px;
     border-radius: 12px;
+    border: none;
 }
 
 .view-button {
     background-color: #ea5316;
-    padding: 8px;
+    padding: 16px;
     color: wheat;
-    font-size: 20px;
-    margin-right: 48px;
+    font-size: 16px;
     border-radius: 12px;
+    border: none;
 }
 
 .cart-container{

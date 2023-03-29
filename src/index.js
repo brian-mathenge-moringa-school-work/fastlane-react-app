@@ -8,6 +8,7 @@ import Cars from './Components/Cars';
 import Sidebar  from './Components/Sidebar';
 import Footer from './Components/Footer'
 import CarDetails from './Components/CarDetails'
+import SidebarProvider from './Contexts/SidebarContext';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import "../src/App.css"
 
@@ -16,6 +17,7 @@ root.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
+  <SidebarProvider>
   <Router>
     <Routes>
       <Route path='/' element={<App />}/>
@@ -26,6 +28,7 @@ root.render(
     <Sidebar />
     <Footer />
   </Router>
+  </SidebarProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -19,7 +19,7 @@ function Home(){
                     <p>Our mission at Fastlane Luxury Motors is to provide our customers with a world-class experience in the purchase and ownership of high-end luxury cars. </p>
                     
                 </div>
-            </div>
+            {/* </div>
             <div className="aboutheader">
             <h1 className="abouth1">The road to your perfect car starts here</h1>
               <p className="pbout">We are committed to offering the finest selection of vehicles, exceptional customer service, and personalized attention to detail. </p>
