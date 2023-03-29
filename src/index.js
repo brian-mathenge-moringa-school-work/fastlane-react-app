@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import NavBar from './Components/NavBar';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import "../src/App.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +12,7 @@ root.render(
   //   <App />
   // </React.StrictMode>
   <Router>
-  <NavBar />
+  {/* <NavBar /> */}
 <Routes>
   <Route path='/' element={<App />}/>
 </Routes>

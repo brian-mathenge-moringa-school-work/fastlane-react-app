@@ -4,10 +4,10 @@ import logo1 from "../images/Logo2.png"
 function NavBar() {
     return (
         <div className="cont1">
-            <div>
-                <img src={logo1} alt="Logo" style={{width: "100px", height: "auto"}}/>
+            <div className="logo-image">
+                <img className="logo-image" src={logo1} alt="Logo"/>
             </div>
-            <h2 className="header1">FASTLANE LUXURY MOTORS</h2>
+            {/* <h2 className="header1">FASTLANE LUXURY MOTORS</h2> */}
             <nav>
                 <ul>
                     <li>
