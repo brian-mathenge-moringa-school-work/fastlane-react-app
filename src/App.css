@@ -297,7 +297,7 @@
 .card-img-top{
     margin: 0;
     padding: 0px;
-    height: 400px;
+    height: 300px;
     width: 400px;
 }
 
@@ -397,16 +397,28 @@
 
 .car-details {
     color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.single-car-details {
+    width: 50%;
+    height: auto;
+    align-items: flex-end;
+    font-size: 16px;
 }
 
 .single-car-image {
-    width: 600px;
+    width: 750px;
     height: 500px;
     padding-left: 32px;
 }
 
 .single-car-model {
-    margin-left: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+    margin-top: 48px;
 }
 
 .cart-button {
@@ -429,6 +441,12 @@
     font-size: 16px;
     border-radius: 12px;
     border: none;
+}
+
+.suggested-cars-title {
+    color: #fff;
+    margin-top: 48px;
+    margin-left: 50px;
 }
 
 .cart-container{
