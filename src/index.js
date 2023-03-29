@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import About from './Components/About';
 import NavBar from './Components/NavBar';
+import Cars from './Components/Cars';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import "../src/App.css"
 
@@ -12,11 +14,12 @@ root.render(
   //   <App />
   // </React.StrictMode>
   <Router>
-  {/* <NavBar /> */}
-<Routes>
-  <Route path='/' element={<App />}/>
-</Routes>
-</Router>
+    <Routes>
+      <Route path='/' element={<App />}/>
+      <Route path='/about' element={<About />}/>
+      <Route path='/cars' element={<Cars />}/>
+    </Routes>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

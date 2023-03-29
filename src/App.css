@@ -26,6 +26,7 @@
 }
 
  .cont1 {
+    background-color: transparent;
     color: white;
      height: 100px;
      width: 100%;
@@ -413,3 +414,55 @@ form input {
 .layout p:hover{
     color: yellow;
 }
+
+
+
+.aboutcontent {
+    background-color: #000;
+    height: 100%;
+}
+
+.about-section {
+    padding: 30px;
+}
+
+
+
+.img-fluid {
+    height: 300px;
+    width: 450px;
+    position: absolute;
+    right: 10;
+}
+
+/*.about-section__left-title {
+    padding-bottom: 16px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.about-section__desc {
+    background-color: #fff;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 200;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 90%;
+} */
+
+.btn-oval {
+    border-radius: 20px;
+    background-color: #ea5316;
+    border-color: #ea5316;
+    color: #fff;
+}
+
+/* .img-fluid {
+    text-align: right;
+    align-items: flex-end;
+    display: inline-block;
+} */
