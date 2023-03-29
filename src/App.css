@@ -298,9 +298,7 @@
     width: 400px;
 }
 
-.car-image-details {
-    hover: 
-}
+
 
 .card-head {
     margin-left: 0;
@@ -382,6 +380,29 @@
     color: wheat;
     font-size: 20px;
     margin-right: 140px;
+    border-radius: 12px;
+}
+
+.navigation-buttons {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.cart-button {
+    background-color: #ea5316;
+    padding: 8px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 48px;
+    border-radius: 12px;
+}
+
+.view-button {
+    background-color: #ea5316;
+    padding: 8px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 48px;
     border-radius: 12px;
 }
 
