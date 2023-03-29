@@ -1,12 +1,12 @@
 import React from "react";
 // import fastlane2 from "../images/fastlane2.png"
-import logo1 from "../images/Logo2.png"
+// import logo1 from "../images/Logo2.png"
 
 function Home() {
     return (
         <div>
             <div>
-                <img src={logo1} alt="car-logo" />
+                {/* <img src={logo1} alt="car-logo" /> */}
                 <div className="home-content">
                     <h1>FASTLANE LUXURY MOTORS</h1>
                     <p>DRIVE INTO YOUR DREAMS</p>
