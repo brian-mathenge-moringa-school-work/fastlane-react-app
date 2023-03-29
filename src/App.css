@@ -395,6 +395,20 @@
     display: flex;
 }
 
+.car-details {
+    color: #fff;
+}
+
+.single-car-image {
+    width: 600px;
+    height: 500px;
+    padding-left: 32px;
+}
+
+.single-car-model {
+    margin-left: 150px;
+}
+
 .cart-button {
     background-color: #ea5316;
     padding: 8px;

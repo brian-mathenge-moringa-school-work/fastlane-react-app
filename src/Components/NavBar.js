@@ -22,6 +22,13 @@ function NavBar() {
                     <li>
                         <Link to="/contact">Contacts</Link>
                     </li>
+                    <li>
+                        Signup
+                    </li>
+                    <li>
+                        Login
+                    </li>
+
                 </ul>
             </nav>
         </div>
