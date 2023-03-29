@@ -16,7 +16,7 @@ function CarList() {
             <NavBar />
         <div className="card-row" style={{ display: "flex", flexWrap: "wrap", borderRadius: "40px" }}>
       {cars.map(car => (
-        <div className="col-4" style={{ marginTop: "100px", borderRadius: "30px" }} key={car.id}>
+        <div className="col-4" style={{ marginTop: "36px", borderRadius: "30px" }} key={car.id}>
           <div className="card" style={{ width: "28rem" }}>
             <img className="card-img-top" src={car.image} alt="Car" />
             <div className="card-body">
