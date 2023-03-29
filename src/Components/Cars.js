@@ -17,7 +17,7 @@ function CarList() {
         <div className="card-row" style={{ display: "flex", flexWrap: "wrap", borderRadius: "40px" }}>
       {cars.map(car => (
         <div className="col-4" style={{ marginTop: "36px", borderRadius: "30px" }} key={car.id}>
-          <div className="card" style={{ width: "28rem" }}>
+          <a class="car-image-details" href="./"><div className="card" style={{ width: "28rem" }}>
             <img className="card-img-top" src={car.image} alt="Car" />
             <div className="card-body">
                 <nav className="card-head">
@@ -37,7 +37,7 @@ function CarList() {
               {/* <button className="btn btn-danger" style={{ marginRight: "5px" }} onClick={() => deleteHouse(house.id)}>Delete</button>
               <button className="btn btn-secondary" style={{ marginRight: "30px" }} onClick={() => editHouse(house.id)}>Edit</button> */}
             </div>
-          </div>
+          </div></a>
         </div>
       ))}
     </div>
