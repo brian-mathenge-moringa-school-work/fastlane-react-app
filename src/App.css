@@ -16,7 +16,7 @@
 
  body {
      margin: 0;
-     background-color: white;
+     background-color: #000;
  }
 
 .logo-image {
@@ -277,18 +277,108 @@
 }
 .card{
     border: none;
-    margin: 5px 10px 0px 60px;
+    padding: 10px;
 }
 .card-body{
-    background-color: rgba(0, 0, 0, 0.116);
+    color: #fff;
     font-family: 'Oranienbaum', serif;
     font-family: 'Zilla Slab', serif;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 0px;
+    padding-top: 0px;
+    padding-bottom: 8px;
     
 }
-.card-title{
-    color: rgb(10, 10, 10);
-    font-weight: bold;
+
+.card-img-top{
+    margin: 0;
+    padding: 0px;
+    height: 400px;
+    width: 400px;
+}
+
+.card-head {
+    margin-left: 0;
+    display: flex;
+    margin-bottom: 24px;
     
+    
+}
+.card-model{
+    color: wheat;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 24px;
+    margin-left: 128px;
+    display: inline-block;
+}
+
+.card-year{
+    background-color: rgb(27, 26, 26);
+    padding: 8px;
+    color: wheat;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 16px;
+    margin-left: 12px;
+    border-radius: 12px;
+}
+
+.car-segments {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.car-engine {
+    background-color: rgb(27, 26, 26);
+    padding: 8px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 36px;
+    margin-left: 16px;
+    border-radius: 12px;
+}
+
+.car-transmission {
+    background-color: rgb(27, 26, 26);
+    padding: 8px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 48px;
+    border-radius: 12px;
+}
+
+.car-drive {
+    background-color: rgb(27, 26, 26);
+    padding: 8px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 48px;
+    border-radius: 12px;
+}
+
+.car-footer {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.car-price {
+    padding: 8px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 36px;
+    margin-left: 16px;
+}
+
+.car-availability {
+    background-color: rgb(13, 63, 25);
+    padding: 4px;
+    color: wheat;
+    font-size: 20px;
+    margin-right: 140px;
+    border-radius: 12px;
 }
 
 .cart-container{
@@ -466,3 +556,7 @@ form input {
     align-items: flex-end;
     display: inline-block;
 } */
+
+.car-list {
+    background-color: #000;
+}
