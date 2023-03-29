@@ -145,19 +145,20 @@
 
  .homecontent {
     /* background-color: rgb(0, 0, 0); */
-    background: url("./images/flm7.jpg") bottom center no-repeat;
+    background: url("./images/flm7.jpg") top center no-repeat;
+    background-size: cover;
      position: relative;
      /* width: 100%; */
      /* display: flex; */
-     justify-content: center;
-     align-items: center;
-     height: 1100px;
+     /* justify-content: center;
+     align-items: center; */
+     height: 1000px;
      margin: 0, auto;
  }
 
  .homeinnercont {
-     background-color: rgba(0, 0, 0, 0.864);
-     margin-top: 20%;
+     background-color: rgba(0, 0, 0, 0.764);
+     margin-top: 15%;
      margin-right: 200px;
      margin-left: 200px;
      padding-top: 16px;
