@@ -30,7 +30,7 @@
     color: white;
      height: 100px;
      width: 100%;
-     font-family: 'Gloock', serif;
+     font-family: sans-serif;
      align-items: center;
      justify-content: center;
      margin: 0px;
@@ -63,7 +63,8 @@
      display: flex;
      gap: 35px;
      list-style: none;
-     font-size: 25px;
+     font-size: 20px;
+     font-family: sans-serif;
     
  }
 
@@ -72,6 +73,7 @@
      display: inline-block;
      line-height: 20px;
      margin-top:-50px ;
+     font-family: sans-serif;
      
 
  }
@@ -347,8 +349,7 @@
 }
 .card-body{
     color: #fff;
-    font-family: 'Oranienbaum', serif;
-    font-family: 'Zilla Slab', serif;
+    font-family: sans-serif;
     font-size: 18px;
     line-height: 1.2;
     padding: 0px;
