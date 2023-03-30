@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "./NavBar";
 
-function CarDetails() {
+function CarDetails(handleAddCar) {
     const [car, setCar] = useState({});
     const { id } = useParams();
     const [ carsByBrand, setCarsByBrand ] = useState([]);
