@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar';
 import Cars from './Components/Cars';
 import Footer from './Components/Footer'
 import CarDetails from './Components/CarDetails'
+import Signup from './Components/Signup'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import "../src/App.css"
 
@@ -20,6 +21,7 @@ root.render(
       <Route path='/' element={<App />}/>
       <Route path='/cars' element={<Cars />}/>
       <Route path='/cars/:id' element={<CarDetails />}/>
+      <Route path='/signup' element={<Signup />}/>
     </Routes>
     <Footer />
   </Router>
