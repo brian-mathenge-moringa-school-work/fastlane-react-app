@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import About from './Components/About';
 import NavBar from './Components/NavBar';
 import Cars from './Components/Cars';
 import Footer from './Components/Footer'
@@ -19,7 +18,6 @@ root.render(
   <Router>
     <Routes>
       <Route path='/' element={<App />}/>
-      <Route path='/about' element={<About />}/>
       <Route path='/cars' element={<Cars />}/>
       <Route path='/cars/:id' element={<CarDetails />}/>
     </Routes>
