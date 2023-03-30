@@ -823,3 +823,8 @@ form input {
     margin-bottom: 40px;
     color: wheat;
 }
+
+.cart .total {
+    text-align: right;
+    border-top: 1px solid black;
+}

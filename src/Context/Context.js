@@ -11,7 +11,33 @@ export const Context=(props) => {
                 } else {
                     return [...state,action.payload];
                 }
-                
+
+                case 'INCREASE':
+                    const tempstate1=state.map((car) =>{
+                        if(car.id===action.payload.id){
+                           return {...car,quantity:car.quantity+1};
+                        } else {
+                            return car
+                        }
+                    })
+                    return tempstate1;
+
+                    case 'DECREASE':
+                        const tempstate2=state.map((car) =>{
+                            if(car.id===action.payload.id){
+                               return {...car,quantity:car.quantity-1};
+                            } else {
+                                return car
+                            }
+                        })
+                        return tempstate2;
+
+                    case "REMOVE":
+                        const tempstate3 = state.filter(
+                            (car) => car.id!==action.payload.id
+                        );
+                        return tempstate3;
+                            
 
 
             default: return state;

@@ -6,7 +6,11 @@ function Cart() {
 
     const Globalstate=useContext(Cartcontext);
     const state = Globalstate.state
-    const dispatch = Globalstate.dispatch
+    const dispatch = Globalstate.dispatch;
+
+    const total=state.reduce((total, car)=>{
+        return(total+(parseInt((car.price).replace(/[^\d]/g, "")))*car.quantity)
+    },0)
 
   return (
     <div className="cart">
@@ -18,16 +22,23 @@ function Cart() {
             <p>{car.model}</p>
             <p>{car.quantity * (parseInt((car.price).replace(/[^\d]/g, "")))}</p>
             <div className="quantity">
-                <button>+</button>
+                <button onClick={() => dispatch({type:'INCREASE',payload:car})}>+</button>
                 <p>{car.quantity}</p>
-                <button>-</button>
+                <button onClick={() => {
+                    if(car.quantity > 1){
+                        dispatch({type: "DECREASE", payload: car});
+                    } else {
+                        dispatch({type: "REMOVE", payload: car})
+                    }
+                }}>-</button>
             </div>
-            <h2>X</h2>
+            <h2 onClick={() => dispatch({type:'REMOVE', payload: car})}>X</h2>
 
 
         </div>
         )
     })}
+    {state.length>0&& <div className="total"><h2>{total}</h2></div>}
   </div>
   )
 }
