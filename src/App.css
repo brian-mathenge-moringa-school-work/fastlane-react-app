@@ -329,6 +329,13 @@
     align-items: center;
 }
 
+.about2 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
 .about1-car-header {
     margin-left: 70px;
     color: wheat;
