@@ -24,13 +24,13 @@ function Home(){
                 <img className="about-car-image" src={fastlane2} alt="car-about" />
                 <div>
                     <h2 className="about1-car-header">Experience the thrill of the ride with us</h2>
-                    <p className="about1-car-desc">We are committed to offering the finest selection of vehicles, exceptional customer service, and personalized attention to detail. </p>
+                    <p className="about1-car-desc">We are committed to offering the finest selection of vehicles, exceptional customer service, and personalized attention to detail</p>
                 </div>
             </div>
             <div className="about1">
                 <div>
-                    <h2 className="about2-car-header">Experience the thrill of the ride with us</h2>
-                    <p className="about2-car-desc">We are committed to offering the finest selection of vehicles, exceptional customer service, and personalized attention to detail. </p>
+                    <h2 className="about2-car-header">Making car buying simple and affordable</h2>
+                    <p className="about2-car-desc">Our goal is to exceed our customers' expectations at every turn, delivering a seamless and enjoyable buying experience that reflects the unparalleled quality and craftsmanship of the cars we sell</p>
                 </div>
                 <img className="about2-car-image" src={fastlane4} alt="car-about" />
             </div>
