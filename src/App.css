@@ -214,8 +214,6 @@
      margin-bottom: 30px;
  }
 
-
-
  .aboutheader {
      justify-content: center;
      align-items: center;
@@ -317,6 +315,56 @@
 .phone2-footer {
     margin-bottom: 5px;
 }
+
+.about-car-image {
+    margin-left:150px;
+    margin-top: 100px;
+    height: 600px;
+    width: 400px;
+}
+
+.about1 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.about1-car-header {
+    margin-left: 70px;
+    color: wheat;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.about1-car-desc {
+    margin-left: 70px;
+    margin-top: 24px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.about2-car-image {
+    margin-right:150px;
+    margin-top: 100px;
+    height: 400px;
+    width: 500px;
+}
+
+.about2-car-header {
+    margin-left: 70px;
+    color: wheat;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 36px;
+}
+
+.about2-car-desc {
+    margin-left: 70px;
+    margin-top: 24px;
+    text-align: left;
+    font-size: 18px;
+}
+
 
 .footer-mission {
     font-size: 30px;
@@ -504,6 +552,8 @@
 .single-car-price {
     text-align: left;
 }
+
+
 
 
 
