@@ -25,23 +25,23 @@ function CarDetails() {
     }, [id, car.brand])
 
     return (
-        <div>
+        <div className="car-details-page">
             <NavBar />
             <div className="car-details">
                 <img className="single-car-image" src={car.image} alt="Car" />
                 <div className="single-car-details">
                     <h1 className="single-car-model">{car.model}</h1>
-                    <p>Brand: {car.brand}</p>
-                    <p>{car.description}</p>
-                    <p>Price: {car.price}</p>
-                    <p>Year of manufacture: {car.year_of_manufacture}</p>
-                    <p>Source country: {car.source_country}</p>
-                    <p>Availability: {car.availability}</p>
-                    <p>Drive: {car.drive}</p>
-                    <p>Mileage: {car.mileage}</p>
-                    <p>Engine size: {car.engine_size}</p>
-                    <p>Fuel: {car.fuel}</p>
-                    <p>Transmission: {car.transmission}</p>
+                    <p className="single-car-brand">Brand: {car.brand}</p>
+                    <p className="single-car-brand">{car.description}</p>
+                    <p className="single-car-price">Price: {car.price}</p>
+                    <p className="single-car-brand">Year of manufacture: {car.year_of_manufacture}</p>
+                    <p className="single-car-brand">Source country: {car.source_country}</p>
+                    <p className="single-car-brand">Availability: {car.availability}</p>
+                    <p className="single-car-brand">Drive: {car.drive}</p>
+                    <p className="single-car-brand">Mileage: {car.mileage}</p>
+                    <p className="single-car-brand">Engine size: {car.engine_size}</p>
+                    <p className="single-car-brand">Fuel: {car.fuel}</p>
+                    <p className="single-car-brand">Transmission: {car.transmission}</p>
                 </div>
             </div>
             <h2 className="suggested-cars-title">Suggested vehicles for you</h2>

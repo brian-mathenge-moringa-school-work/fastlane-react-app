@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import { Link } from 'react-router-dom';
 import { BsPlus, BsEyeFill } from 'react-icons/bs'
+import flm7 from "../images/flm7.jpg";
 
 function CarList() {
     const [cars, setCars] = useState([]);

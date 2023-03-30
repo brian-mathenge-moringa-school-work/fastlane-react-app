@@ -94,7 +94,7 @@ function Home(){
                 </div>
             </div>
         </div>
-        <footer>
+        {/* <footer>
             <div className="footer">
             <h5 className="awards">Our Awards
              <p>Over 1,240,000+ Happy Users Being With Us Still They Love Our Services </p>
@@ -121,7 +121,7 @@ function Home(){
                       <h5>Copyright @2023 All Rights  Reserved | MAQANI REAL ESTATE.</h5>
                  </div>
             </div>
-        </footer>
+        </footer> */}
       
 </div>
     )
