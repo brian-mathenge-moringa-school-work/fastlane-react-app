@@ -573,6 +573,19 @@
     border: none;
 }
 
+.details-cart-button {
+    background-color: #ea5316;
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: wheat;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border-radius: 12px;
+    border: none;
+}
+
 .view-button {
     background-color: #ea5316;
     padding: 16px;

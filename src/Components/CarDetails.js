@@ -42,6 +42,7 @@ function CarDetails() {
                     <p className="single-car-brand">Engine size: {car.engine_size}</p>
                     <p className="single-car-brand">Fuel: {car.fuel}</p>
                     <p className="single-car-brand">Transmission: {car.transmission}</p>
+                    <button className="details-cart-button">Add to Cart</button>
                 </div>
             </div>
             <h2 className="suggested-cars-title">Suggested vehicles for you</h2>
