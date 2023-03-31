@@ -834,6 +834,7 @@ form input {
     font-size: 32px;
     font-family: sans-serif;
     margin-bottom: 40px;
+    margin-top: 1px;
     color: wheat;
 }
 
@@ -867,4 +868,16 @@ form input {
 
 .login-form {
     margin-top: 30px;
+}
+
+.X-button {
+    margin-left: 60px;
+}
+
+.cart-model {
+    font-size: 24px;
+}
+
+.cart-price {
+    font-size: 24px;
 }

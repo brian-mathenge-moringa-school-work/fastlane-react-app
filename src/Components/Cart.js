@@ -13,14 +13,16 @@ function Cart() {
     },0)
 
   return (
+    <div>
+        <NavBar />
     <div className="cart">
         <h2 className="cart-header">Your Ride is Here!!</h2>
     {state.map((car, index) => {
         return (
             <div className="cart-card" key={index}>
             <img src={car.image} alt=""/>
-            <p>{car.model}</p>
-            <p>{car.quantity * (parseInt((car.price).replace(/[^\d]/g, "")))}</p>
+            <p className="cart-model">{car.model}</p>
+            <p className="cart-price">{car.quantity * (parseInt((car.price).replace(/[^\d]/g, "")))}</p>
             <div className="quantity">
                 <button onClick={() => dispatch({type:'INCREASE',payload:car})}>+</button>
                 <p>{car.quantity}</p>
@@ -32,13 +34,14 @@ function Cart() {
                     }
                 }}>-</button>
             </div>
-            <h2 onClick={() => dispatch({type:'REMOVE', payload: car})}>X</h2>
+            <h2 className="X-button" onClick={() => dispatch({type:'REMOVE', payload: car})}>X</h2>
 
 
         </div>
         )
     })}
     {state.length>0&& <div className="total"><h2>{total}</h2></div>}
+  </div>
   </div>
   )
 }
