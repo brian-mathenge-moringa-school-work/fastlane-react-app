@@ -18,7 +18,7 @@ function NavBar() {
                         <Link to="/cars">Cars</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contacts</Link>
+                        <Link to="/contacts">Contacts</Link>
                     </li>
                     <li>
                         <Link to="/signup" className="signup-button">Signup</Link>

@@ -8,6 +8,7 @@ import CarDetails from './Components/CarDetails'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
 import Cart from './Components/Cart';
+import Contacts from "./Components/Contacts";
 import { BrowserRouter as Router,Routes,Route,redirect } from 'react-router-dom';
 import "../src/App.css"
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/cars' element={<Cars />} />
           <Route path='/cars/:id' element={<CarDetails />} />
+          <Route path='/contacts' element={<Contacts />} />
           <Route 
             path='/signup'
             // Component={() => 
