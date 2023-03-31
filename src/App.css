@@ -771,7 +771,20 @@ form input {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #86c2f3;
+    background-color: rgba(75, 70, 70, 0.623);
+    margin-top: 30px;
+    height: 60vh;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.login {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(75, 70, 70, 0.623);
     margin-top: 30px;
     height: 60vh;
     font-size: 20px;
@@ -827,4 +840,31 @@ form input {
 .cart .total {
     text-align: right;
     border-top: 1px solid black;
+}
+
+.signup-page-button {
+    background-color: #ea5316;
+    padding: 10px;
+    color: wheat;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+}
+
+.signup-form {
+    margin-top: 30px;
+}
+
+.login-button-page {
+    background-color: #ea5316;
+    padding: 10px;
+    color: wheat;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 36px;
+}
+
+.login-form {
+    margin-top: 30px;
 }

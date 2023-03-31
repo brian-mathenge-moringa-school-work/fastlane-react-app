@@ -1,24 +1,18 @@
-// import React from "react";
-
-
-// function Signup() {
-//     return(
-//         <div className="signup">Signup</div>
-//     )
-// }
-
-// export default Signup;
-
 import React, { Component } from "react";
+import {
+  Form,
+  Grid,
+  Button,
+  Header,
+  Message,
+  Segment,
+} from "semantic-ui-react";
 import "../App.css";
-import { Form, Button, Grid, Header, Segment } from "semantic-ui-react";
 
-class Signup extends Component {
+class Login extends Component {
   state = {
     email: "",
-    name: "",
     password: "",
-    password_confirmation: "",
   };
 
   handleChange = (event) => {
@@ -27,28 +21,30 @@ class Signup extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.handleSubmit(this.state, "/users");
+    this.props.handleSubmit(this.state, "/sessions");
   };
 
   render() {
     return (
-        <div className="signup">
+      <div className="login">
         <Grid textAlign="center" verticalAlign="middle">
           <Grid.Column style={{ maxWidth: 450 }}>
             <Header as="h2" textAlign="center">
-              Create Your Account
+              Log-in to your account
             </Header>
             <Form
-              className="signup-form"
+              className="login-form"
               onSubmit={(event) => this.handleSubmit(event)}
               size="large"
             >
               <Segment stacked>
                 <Form.Input
                   fluid
-                  placeholder="E-mail address"
+                  icon="user"
+                  iconPosition="left"
                   type="text"
                   name="email"
+                  placeholder="E-mail address"
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
@@ -56,38 +52,25 @@ class Signup extends Component {
 
                 <Form.Input
                   fluid
-                  placeholder="Name"
-                  type="text"
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                />
-                <br />
-
-                <Form.Input
-                  fluid
-                  placeholder="Password"
+                  icon="lock"
+                  iconPosition="left"
                   type="password"
                   name="password"
+                  placeholder="Password"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
                 <br />
 
-                <Form.Input
-                  fluid
-                  placeholder="Confirm Password"
-                  type="password"
-                  name="password_confirmation"
-                  value={this.state.password_confirmation}
-                  onChange={this.handleChange}
-                />
-                <br />
-                <Button className="signup-page-button">
-                  Sign Up
+                {/* <input type='submit'/>  */}
+                <Button className="login-button-page" color="olive" fluid size="large">
+                  Login
                 </Button>
               </Segment>
             </Form>
+            <Message>
+              New to us? <a href="/signup">Sign Up</a>
+            </Message>
           </Grid.Column>
         </Grid>
       </div>
@@ -95,4 +78,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default Login;

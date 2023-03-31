@@ -6,8 +6,9 @@ import Cars from './Components/Cars';
 import Footer from './Components/Footer'
 import CarDetails from './Components/CarDetails'
 import Signup from './Components/Signup'
+import Login from './Components/Login'
 import Cart from './Components/Cart';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route,redirect } from 'react-router-dom';
 import "../src/App.css"
 
 function App() {
@@ -35,7 +36,16 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/cars' element={<Cars />} />
           <Route path='/cars/:id' element={<CarDetails />} />
-          <Route path='/signup' element={<Signup />} />
+          <Route 
+            path='/signup'
+            // Component={() => 
+            //   this.state.userid ? (
+            //     href="/"
+            //   ) : (
+            //     <Signup handleSubmit={this.handleSubmit}/>
+            //   )}
+             element={<Signup />}/>
+             <Route path='/login' element={<Login />}/>
           <Route path='/cart' element={<Cart />} />
         </Routes>
         <Footer />
