@@ -1,5 +1,6 @@
 import React from "react";
 import fastlane2 from "../images/fastlane2.png"
+import fastlane3 from "../images/fastlane3.jpg"
 import fastlane4 from "../images/fastlane4.jpg"
 import flm1 from "../images/flm1.jpg"
 import flm2 from "../images/flm2.jpg"
@@ -19,6 +20,9 @@ import subaru from "../images/subaru-logo.png"
 import tesla from "../images/tesla-logo.png"
 import toyota from "../images/toyota-logo.png"
 import volkswagen from "../images/vw-logo.png"
+import carsearch from "../images/car.png"
+import pay from "../images/pay.png"
+import mail from "../images/mail.png"
 import NavBar from "./NavBar";
 function Home(){
     return(
@@ -88,6 +92,30 @@ function Home(){
                 </div>
                 <img className="about2-car-image" src={flm5} alt="car-about" />
             </div>
+            <div className="process-container">
+                <p className="process-summary">Owning your dream car is a 3-step process</p>
+                <div className="process-section">
+                    <div className="process-header-container">
+                        <img className="process-image" src={carsearch} alt="car-about" />
+                        <h4 className="process-header">Select your car</h4>
+                        <p classname="process-desc">Browse through our collection in kenya or a choice of ready for export units carefully handpicked by our international team in Singapore,Japan & the UK and choose your preferred unit.</p>
+                    </div>
+                    <div className="process-header-container">
+                        <img className="process-image" src={mail} alt="car-about" />
+                        <h4 className="process-header">Make an Enquiry</h4>
+                        <p classname="process-desc">Get in touch with our sales team for an invoice or visit us at our Diamond plaza II offices in Nairobi for further information.</p>
+                    </div>
+                    <div className="process-header-container">
+                        <img className="process-image" src={pay} alt="car-about" />
+                        <h4 className="process-header">Payment</h4>
+                        <p classname="process-desc">Pay & drive off with your vehicle for kenyan available cars. Place an order,pay the CIF amount via bank transfer and sit back us we ship your vehicle to your preferred port of choice (for importation clients).</p>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="sunset-rideoff">
+                <img className="sunset-rideoff-image" src={fastlane3} alt="ride-off" />
+                <h2 className="sunset-rideoff-desc">Visit us today and ride off into the sunset!</h2>
+            </div> */}
         </div>
     </div>
     )}

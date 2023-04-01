@@ -72,7 +72,7 @@ function Contacts() {
                 horizontal
                 style={{ margin: "1em 0em", textTransform: "uppercase" }}
                 >
-                How to find us
+                -----How to find us-----
             </Divider>
 
             <Segment style={{ padding: "8m 0em" }} vertical>

@@ -334,7 +334,7 @@
     color: #fff;
     display: flex;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 .about1-car-header {
@@ -987,4 +987,51 @@ form input {
     margin-top: 50px;
     font-weight: bolder;
     color: lightgray;
+}
+
+.process-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-family: sans-serif;
+}
+
+.process-desc {
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.process-summary {
+    text-align: center;
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-bottom: 70px;
+}
+
+.process-container {
+    background-color: #212122;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 16px;
+    margin-top: 50px;
+    margin-bottom: 180px;
+}
+
+.process-image {
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.process-header-container {
+    text-align: center;
 }
