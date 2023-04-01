@@ -812,6 +812,7 @@ form input {
     height: 70vh;
     font-size: 20px;
     font-weight: 700;
+    margin-bottom: 150px;
 }
 
 .cart {
@@ -917,5 +918,34 @@ form input {
 
 .cart-price {
     font-size: 24px;
+}
+
+.map {
+    padding-left: 180px;
+    padding-right: auto;
+}
+
+.map-header {
+    color: #fff;
+    text-align: center;
+    margin-top: 200px;
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.map-container-header {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+.map-container-desc {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-family: sans-serif;
 }
 
