@@ -23,6 +23,7 @@ import volkswagen from "../images/vw-logo.png"
 import carsearch from "../images/car.png"
 import pay from "../images/pay.png"
 import mail from "../images/mail.png"
+import caricon from "../images/car-icon.png"
 import NavBar from "./NavBar";
 function Home(){
     return(
@@ -96,7 +97,7 @@ function Home(){
                 <p className="process-summary">Owning your dream car is a 3-step process</p>
                 <div className="process-section">
                     <div className="process-header-container">
-                        <img className="process-image" src={carsearch} alt="car-about" />
+                        <img className="process-image" src={caricon} alt="car-about" />
                         <h4 className="process-header">Select your car</h4>
                         <p classname="process-desc">Browse through our collection in kenya or a choice of ready for export units carefully handpicked by our international team in Singapore,Japan & the UK and choose your preferred unit.</p>
                     </div>
