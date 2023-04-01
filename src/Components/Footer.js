@@ -4,7 +4,7 @@ function Footer() {
     return(
         <div className="footer">
         {/* <h5 className="awards">Our Awards */}
-         <p className="footer-mission">We're committed to finding your perfect match. </p>
+         <p className="footer-mission">We're committed to finding your perfect ride. </p>
         {/* </h5>  */}
             <div className="footercont">
                 <h5 className="layout">Company
