@@ -266,19 +266,20 @@
     color: #fff;
     display: inline-flex;
     position: relative;
-    margin-right: auto;
+    margin-right: 300px;
     margin-left: 400px;
 
     /* width:0%; */
     /* padding-top: 20px; */
-    gap: 3rem;
-    font-family: 'Oranienbaum', serif;
-    font-family: 'Zilla Slab', serif;
+    gap: 8rem;
+    font-family: sans-serif;
+    font-size: 18px;
+    /* font-family: 'Zilla Slab', serif; */
  }
  .footercont h5{
     color: rgb(238, 232, 232);
     margin-top: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
  }
 
 .home-footer {
@@ -337,24 +338,24 @@
 }
 
 .about1-car-header {
-    margin-left: 70px;
+    margin-left: 100px;
     color: wheat;
     font-weight: bolder;
     font-size: 30px;
 }
 
 .about1-car-desc {
-    margin-left: 70px;
+    margin-left: 100px;
     margin-top: 24px;
     text-align: left;
     font-size: 18px;
 }
 
 .about2-car-image {
-    margin-right:150px;
+    margin-right:100px;
     margin-top: 100px;
-    height: 400px;
-    width: 550px;
+    height: 500px;
+    width: 650px;
 }
 
 .about2-car-header {
@@ -375,10 +376,8 @@
 
 .footer-mission {
     font-size: 30px;
-    color: #000;
     font-weight: bolder;
-    font-family: 'Oranienbaum', serif;
-    font-family: 'Zilla Slab', serif;
+    font-family: sans-serif;
 }
 
 
@@ -693,12 +692,12 @@ form input {
 }
 
 .copyright{
-    margin-top: 5px;
-    font-family: 'Oranienbaum', serif;
-    font-family: 'Zilla Slab', serif;
+    margin-top: 32px;
+    font-family: sans-serif;
     text-align: center;
     font-weight: bolder;
-    font-size: 16px;
+    font-size: 24px;
+    margin-top: 48px;
 }
 .services{
     font-family: 'Oranienbaum', serif;
@@ -955,4 +954,37 @@ form input {
     margin-top: 20px;
     line-height: 1.5;
     font-family: sans-serif;
+}
+
+.brand-icons1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.brand-icons2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.brand-icon {
+    width: 120px;
+    height: 120px;
+    padding: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    filter: invert(0%) sepia(87%) saturate(0%) hue-rotate(314deg) brightness(104%) contrast(106%)
+}
+
+.brand-message {
+    font-family: sans-serif;
+    font-size: 32px;
+    margin-top: 50px;
+    font-weight: bolder;
+    color: lightgray;
 }
