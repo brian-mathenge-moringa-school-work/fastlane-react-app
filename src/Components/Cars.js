@@ -12,7 +12,7 @@ function CarList(handleAddCar) {
     const { id, model, brand, image, description, price, year_of_manufacture, source_country, availability, drive, mileage, engine_size, fuel, transmission } = cars;
 
     useEffect(() => {
-        fetch('http://localhost:4000/cars')
+        fetch('https://fastlane.onrender.com/cars')
         .then(response => response.json())
         .then(data => setCars(data))
         .catch(error => console.error(error))

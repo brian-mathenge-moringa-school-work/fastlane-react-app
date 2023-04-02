@@ -8,14 +8,14 @@ function CarDetails(handleAddCar) {
     const [ carsByBrand, setCarsByBrand ] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/cars/${id}`)
+        fetch(`https://fastlane.onrender.com/cars/${id}`)
             .then((response) => response.json())
             .then((data) => setCar(data))
             .catch((error) => console.error(error));
     }, [id]);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/cars`)
+        fetch(`https://fastlane.onrender.com/cars`)
             .then((response) => response.json())
             .then(data => {
                 const carsFromSameBrand = data.filter(item => item.brand === car.brand && item.id !== car.id);
