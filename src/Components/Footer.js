@@ -3,24 +3,7 @@ import React from "react";
 function Footer() {
     return(
         <div className="footer">
-        {/* <h5 className="awards">Our Awards */}
          <p className="footer-mission">We're committed to finding your perfect ride. </p>
-        {/* </h5>  */}
-            <div className="footercont">
-                <h5 className="layout">COMPANY
-                    <p className="home-footer">Home</p>
-                    <p className="cars-footer">Cars</p>
-                    <p className="contacts-footer">Contacts</p>
-                </h5> 
-                <h5 className="footer-socials">ENGAGE WITH US
-                <p className="instagram-footer"><span>Instagram  </span>@FastlaneLuxury </p>
-                <p className="twitter-footer"><span>Twitter  </span>@fastlane_luxury </p>
-                </h5>
-                <h5 className="footer-contacts">GET IN TOUCH WITH US
-                <p className="phone1-footer"><span>Phone </span>+2123-456-788 </p>
-                <p className="phone2-footer"><span>Phone </span>+2123-456-789 </p>
-                </h5>
-            </div>
             <div className="copyright">
                   <h5>©2023 All Rights  Reserved | FASTLANE LUXURY MOTORS™</h5>
              </div>

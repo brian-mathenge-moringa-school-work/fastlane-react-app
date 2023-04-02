@@ -38,16 +38,8 @@ function App() {
           <Route path='/cars' element={<Cars />} />
           <Route path='/cars/:id' element={<CarDetails />} />
           <Route path='/contacts' element={<Contacts />} />
-          <Route 
-            path='/signup'
-            // Component={() => 
-            //   this.state.userid ? (
-            //     href="/"
-            //   ) : (
-            //     <Signup handleSubmit={this.handleSubmit}/>
-            //   )}
-             element={<Signup />}/>
-             <Route path='/login' element={<Login />}/>
+          <Route path='/signup' element={<Signup />}/>
+          <Route path='/login' element={<Login />}/>
           <Route path='/cart' element={<Cart />} />
         </Routes>
         <Footer />

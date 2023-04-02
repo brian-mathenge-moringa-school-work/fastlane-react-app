@@ -113,10 +113,6 @@ function Home(){
                     </div>
                 </div>
             </div>
-            {/* <div className="sunset-rideoff">
-                <img className="sunset-rideoff-image" src={fastlane3} alt="ride-off" />
-                <h2 className="sunset-rideoff-desc">Visit us today and ride off into the sunset!</h2>
-            </div> */}
         </div>
     </div>
     )}
