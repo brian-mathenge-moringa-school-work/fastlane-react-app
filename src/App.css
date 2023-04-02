@@ -1000,6 +1000,7 @@ form input {
     font-size: 24px;
     margin-bottom: 24px;
     font-family: sans-serif;
+    color: wheat;
 }
 
 .process-desc {
@@ -1014,12 +1015,13 @@ form input {
     font-family: sans-serif;
     font-weight: bolder;
     margin-bottom: 70px;
+    color: wheat;
 }
 
 .process-container {
     background-color: #212122;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
     padding: 16px;
     margin-top: 50px;
     margin-bottom: 180px;
@@ -1030,6 +1032,7 @@ form input {
     width: 100px;
     align-items: center;
     margin-bottom: 36px;
+    filter: invert(0%) sepia(87%) saturate(0%) hue-rotate(314deg) brightness(104%) contrast(106%)
 }
 
 .process-header-container {

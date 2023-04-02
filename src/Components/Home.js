@@ -103,12 +103,12 @@ function Home(){
                     </div>
                     <div className="process-header-container">
                         <img className="process-image" src={mail} alt="car-about" />
-                        <h4 className="process-header">Make an Enquiry</h4>
+                        <h4 className="process-header">Enquire</h4>
                         <p classname="process-desc">Get in touch with our sales team for an invoice or visit us at our Diamond plaza II offices in Nairobi for further information.</p>
                     </div>
                     <div className="process-header-container">
                         <img className="process-image" src={pay} alt="car-about" />
-                        <h4 className="process-header">Payment</h4>
+                        <h4 className="process-header">Pay</h4>
                         <p classname="process-desc">Pay & drive off with your vehicle for kenyan available cars. Place an order,pay the CIF amount via bank transfer and sit back us we ship your vehicle to your preferred port of choice (for importation clients).</p>
                     </div>
                 </div>
