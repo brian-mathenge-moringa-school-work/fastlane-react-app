@@ -2,12 +2,22 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Cartcontext } from '../Context/Context';
 import NavBar from './NavBar';
 import { useNavigate } from 'react-router-dom';
+import { Form, Button, Grid, Header, Segment } from "semantic-ui-react";
+import { toast } from 'react-toastify';
 
 function Cart() {
 
     const Globalstate=useContext(Cartcontext);
     const state = Globalstate.state
     const dispatch = Globalstate.dispatch;
+
+
+    const handleClick = (event) => {
+        event.preventDefault();
+        toast.success('Order placed successfully');
+        usenavigate('/cars')
+        // console.log('Place your order');
+      };
 
     const total=state.reduce((total, car)=>{
         return(total+(parseInt((car.price).replace(/[^\d]/g, "")))*car.quantity)
@@ -52,6 +62,11 @@ function Cart() {
     })}
     {state.length>0&& <div className="total"><h2>{total}</h2></div>}
   </div>
+  <div className="place-order-container">
+                <Button className="place-order-button" color="olive" fluid size="large" onClick={handleClick}>
+                  Checkout
+                </Button>
+                </div>
   </div>
   )
 }

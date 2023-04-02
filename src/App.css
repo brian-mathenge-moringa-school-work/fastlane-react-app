@@ -1038,3 +1038,21 @@ form input {
 .process-header-container {
     text-align: center;
 }
+
+.place-order-button {
+    background-color: #ea5316;
+    padding: 10px;
+    color: wheat;
+    font-size: 24px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 36px;
+    padding: 16px;
+    /* float: right; */
+    /* margin-right: 150px; */
+    /* margin: auto; */
+}
+
+.place-order-container {
+    text-align: center;
+}
