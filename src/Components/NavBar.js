@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo1 from "../images/Logo2.png"
-import { FaOpencart } from 'react-icons/fa';
+import { FaOpencart, FaSignOutAlt } from 'react-icons/fa';
 
 function NavBar() {
     return (
@@ -20,15 +20,20 @@ function NavBar() {
                     <li>
                         <Link to="/contacts">Contacts</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/signup" className="signup-button">Signup</Link>
                     </li>
                     <li>
                         <Link to="/login" className="login-button">Login</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/cart" className="cart-icon">
                             <FaOpencart />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/login" className="cart-icon">
+                            <FaSignOutAlt />
                         </Link>
                     </li>
 

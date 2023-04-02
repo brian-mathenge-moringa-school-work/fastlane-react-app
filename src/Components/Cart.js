@@ -1,6 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Cartcontext } from '../Context/Context';
 import NavBar from './NavBar';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
 
@@ -11,6 +12,15 @@ function Cart() {
     const total=state.reduce((total, car)=>{
         return(total+(parseInt((car.price).replace(/[^\d]/g, "")))*car.quantity)
     },0)
+
+    const usenavigate = useNavigate()
+
+    useEffect(()=>{
+        let email = sessionStorage.getItem('email');
+        if(email==='' || email === null){
+            usenavigate('/login')
+        }
+    },[]);
 
   return (
     <div>

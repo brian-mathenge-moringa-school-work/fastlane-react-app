@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import {
   Form,
   Grid,
@@ -8,23 +8,58 @@ import {
   Segment,
 } from "semantic-ui-react";
 import "../App.css";
+import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
-class Login extends Component {
-  state = {
-    email: "",
-    password: "",
-  };
+const Login = () => {
 
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
+  const [email, emailupdate] = useState('')
+  const [password, passwordupdate] = useState('')
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.props.handleSubmit(this.state, "/sessions");
-  };
+  const usenavigate = useNavigate()
 
-  render() {
+  useEffect(()=>{
+    sessionStorage.clear();
+  }, []);
+
+  const ProceedLogin = (e) => {
+    e.preventDefault();
+    if(validate()){
+      // console.log('proceed')
+      fetch("https://fastlane.onrender.com/users/").then((res)=>{
+        return res.json();
+      }).then((resp)=>{
+        // console.log(resp)
+        if (Object.keys(resp).length === 0) {
+          toast.error("Please enter valid email")
+        }else {
+          if (resp.password !== null) {
+            toast.success('Success');
+            sessionStorage.setItem('email', email)
+            usenavigate('/')
+          } else {
+            toast.error("Please enter valid credentials")
+          }
+        }
+      }).catch((err)=>{
+        toast.error('Login Failed due to :'+err.message);
+      })
+    }
+  }
+
+  const validate=()=>{
+    let result=true;
+    if(email==='' || email===null){
+      result=false;
+      toast.warning('Please enter your Email')
+    }
+    if(password==='' || password===null){
+      result=false;
+      toast.warning('Please enter your Password')
+    }
+    return result;
+  }
+
     return (
       <div className="login">
         <Grid textAlign="center" verticalAlign="middle">
@@ -34,31 +69,31 @@ class Login extends Component {
             </Header>
             <Form
               className="login-form"
-              onSubmit={(event) => this.handleSubmit(event)}
               size="large"
+              onSubmit={ProceedLogin}
             >
               <Segment stacked>
                 <Form.Input
                   fluid
-                  icon="user"
-                  iconPosition="left"
+                  value={email}
+                  onChange={e=>emailupdate(e.target.value)}
+                  // icon="user"
+                  // iconPosition="left"
                   type="text"
                   name="email"
                   placeholder="E-mail address"
-                  value={this.state.email}
-                  onChange={this.handleChange}
                 />
                 <br />
 
                 <Form.Input
                   fluid
-                  icon="lock"
-                  iconPosition="left"
+                  value={password}
+                  onChange={e=>passwordupdate(e.target.value)}
+                  // icon="lock"
+                  // iconPosition="left"
                   type="password"
                   name="password"
                   placeholder="Password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
                 />
                 <br />
 
@@ -76,6 +111,5 @@ class Login extends Component {
       </div>
     );
   }
-}
 
 export default Login;
