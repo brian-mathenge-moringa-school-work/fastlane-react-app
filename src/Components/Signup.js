@@ -24,10 +24,39 @@ const Signup = () => {
   const [confirmpassword, confirmpasswordchange] = useState("");
 
   const navigate = useNavigate();
+
+  const isValidate=()=>{
+    let isproceed=true;
+    let errormessage="Please enter the value in"
+    if(email==null || email==''){
+      isproceed=false;
+      errormessage += 'Email';
+    }
+    if(name==null || name==''){
+      isproceed=false;
+      errormessage += 'Name';
+    }
+    if(password==null || password==''){
+      isproceed=false;
+      errormessage += 'Password';
+    }
+    if(!isproceed){
+      toast.warning(errormessage)
+    }else{
+      if(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)){
+
+      }else{
+          isproceed = false;
+          toast.warning('Please enter the valid email')
+      }
+  }
+  return isproceed;
+  } 
   
   const handleSubmit=(e) => {
     e.preventDefault();
     const regobj={email,name,password,confirmpassword};
+    if(isValidate()){
     // console.log(regobj);
 
     fetch("https://fastlane.onrender.com/users",{
@@ -40,6 +69,7 @@ const Signup = () => {
     }).catch((err) => {
       toast.error('Failed :'+err.message);
     });
+  }
   }
 
   return (
