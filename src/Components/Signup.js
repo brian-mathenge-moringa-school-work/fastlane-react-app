@@ -9,90 +9,100 @@
 
 // export default Signup;
 
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "../App.css";
+import { toast } from 'react-toastify';
 import { Form, Button, Grid, Header, Segment } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
 
-class Signup extends Component {
-  state = {
-    email: "",
-    name: "",
-    password: "",
-    password_confirmation: "",
-  };
+const Signup = () => {
 
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
+  // const [id, idchange] = useState("");
+  const [email, emailchange] = useState("");
+  const [name, namechange] = useState("");
+  const [password, passwordchange] = useState("");
+  const [confirmpassword, confirmpasswordchange] = useState("");
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.props.handleSubmit(this.state, "/users");
-  };
+  const navigate = useNavigate();
+  
+  const handleSubmit=(e) => {
+    e.preventDefault();
+    const regobj={email,name,password,confirmpassword};
+    // console.log(regobj);
 
-  render() {
-    return (
-        <div className="signup">
-        <Grid textAlign="center" verticalAlign="middle">
-          <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as="h2" textAlign="center">
-              Create Your Account
-            </Header>
-            <Form
-              className="signup-form"
-              onSubmit={(event) => this.handleSubmit(event)}
-              size="large"
-            >
-              <Segment stacked>
-                <Form.Input
-                  fluid
-                  placeholder="E-mail address"
-                  type="text"
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-                <br />
-
-                <Form.Input
-                  fluid
-                  placeholder="Name"
-                  type="text"
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                />
-                <br />
-
-                <Form.Input
-                  fluid
-                  placeholder="Password"
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                />
-                <br />
-
-                <Form.Input
-                  fluid
-                  placeholder="Confirm Password"
-                  type="password"
-                  name="password_confirmation"
-                  value={this.state.password_confirmation}
-                  onChange={this.handleChange}
-                />
-                <br />
-                <Button className="signup-page-button">
-                  Sign Up
-                </Button>
-              </Segment>
-            </Form>
-          </Grid.Column>
-        </Grid>
-      </div>
-    );
+    fetch("https://fastlane.onrender.com/users",{
+      method:"POST",
+      headers:{'content-type':'application/json'},
+      body:JSON.stringify(regobj)
+    }).then((res) => {
+      toast.success('Registered successfully.')
+      navigate('/login')
+    }).catch((err) => {
+      toast.error('Failed :'+err.message);
+    });
   }
-}
 
-export default Signup;
+  return (
+    <div className="signup">
+    <Grid textAlign="center" verticalAlign="middle">
+      <Grid.Column style={{ maxWidth: 450 }}>
+        <Header as="h2" textAlign="center">
+          Create Your Account
+        </Header>
+        <Form
+          className="signup-form"
+          size="large"
+          onSubmit={handleSubmit}
+        >
+          <Segment stacked>
+            <Form.Input
+              fluid
+              value={email}
+              onChange={e=>emailchange(e.target.value)}
+              placeholder="E-mail address"
+              type="text"
+              name="email"
+            />
+            <br />
+
+            <Form.Input
+              fluid
+              value={name}
+              onChange={e=>namechange(e.target.value)}
+              placeholder="Name"
+              type="text"
+              name="name"
+            />
+            <br />
+
+            <Form.Input
+              fluid
+              value={password}
+              onChange={e=>passwordchange(e.target.value)}
+              placeholder="Password"
+              type="password"
+              name="password"
+            />
+            <br />
+
+            <Form.Input
+              fluid
+              value={confirmpassword}
+              onChange={e=>confirmpasswordchange(e.target.value)}
+              placeholder="Confirm Password"
+              type="password"
+              name="password_confirmation"
+            />
+            <br />
+            <Button className="signup-page-button">
+              Sign Up
+            </Button>
+          </Segment>
+        </Form>
+      </Grid.Column>
+    </Grid>
+  </div>
+);
+};
+
+export default Signup

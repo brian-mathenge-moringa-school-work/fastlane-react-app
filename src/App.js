@@ -11,6 +11,7 @@ import Cart from './Components/Cart';
 import Contacts from "./Components/Contacts";
 import { BrowserRouter as Router,Routes,Route,redirect } from 'react-router-dom';
 import "../src/App.css"
+import { ToastContainer } from "react-toastify";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
   
   return (
     <div className="App">
+      <ToastContainer theme="colored"></ToastContainer>
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
