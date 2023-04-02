@@ -47,7 +47,7 @@ const Signup = () => {
 
       }else{
           isproceed = false;
-          toast.warning('Please enter the valid email')
+          toast.warning('Please enter a valid email')
       }
   }
   return isproceed;

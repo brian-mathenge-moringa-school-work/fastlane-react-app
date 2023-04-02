@@ -1,8 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "./NavBar";
+import { toast } from 'react-toastify';
 import { Form, Button, Grid, Header, Segment, Divider, Container, Embed } from "semantic-ui-react";
+import { useNavigate } from "react-router-dom";
 
 function Contacts() {
+
+    const [name, namechange] = useState("");
+    const [phone, phonechange] = useState("");
+    const [email, emailchange] = useState("");
+    const [message, messagechange] = useState("");
+
+    const usenavigate = useNavigate();
+
+    const isValidate=()=>{
+        let isproceed=true;
+        let errormessage="Please enter the value in "
+        if(name==null || name==''){
+          isproceed=false;
+          errormessage += 'Name';
+        }
+        if(phone==null || phone==''){
+          isproceed=false;
+          errormessage += 'Phone';
+        }
+        if(email==null || email==''){
+          isproceed=false;
+          errormessage += 'Email';
+        }
+        if(!isproceed){
+          toast.warning(errormessage)
+        }else{
+          if(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)){
+    
+          }else{
+              isproceed = false;
+              toast.warning('Please enter the valid email')
+          }
+      }
+      return isproceed;
+    } 
+
+    const sendMessage=(e) => {
+        e.preventDefault();
+            toast.success("Our team will contact you shortly")
+            usenavigate('/')
+    }
+
+
     return(
         <div>
             <NavBar />
@@ -14,48 +59,48 @@ function Contacts() {
                     </Header>
                     <Form
                         className="contact-form"
-                        //   onSubmit={(event) => this.handleSubmit(event)}
                         size="large"
+                        onSubmit={sendMessage}
                         >
                         <Segment stacked>
                         <Form.Input
                             fluid
+                            value={name}
+                            onChange={e=>namechange(e.target.value)}
                             placeholder="Name"
                             type="text"
                             name="name"
-                            //   value={this.state.name}
-                            //   onChange={this.handleChange}
                         />
                         <br />
 
                         <Form.Input
                             fluid
+                            value={phone}
+                            onChange={e=>phonechange(e.target.value)}
                             placeholder="Phone Number"
                             type="integer"
                             name="phone"
-                            //   value={this.state.phone}
-                            //   onChange={this.handleChange}
                         />
                         <br />
 
                         <Form.Input
                             fluid
+                            value={email}
+                            onChange={e=>emailchange(e.target.value)}
                             placeholder="Email"
                             type="text"
                             name="email"
-                            //   value={this.state.email}
-                            //   onChange={this.handleChange}
                         />
                         <br />
 
                         <Form.TextArea
                             fluid
+                            value={message}
+                            onChange={e=>messagechange(e.target.value)}
                             cols="20"
                             placeholder="Message"
                             type="text"
                             name="message"
-                            //   value={this.state.message}
-                            //   onChange={this.handleChange}
                         />
                         <br />
                         <Button className="contact-page-button">
